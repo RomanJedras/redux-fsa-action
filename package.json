@@ -8,7 +8,7 @@
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp sass css vendor images js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "start": "babel actions.js --watch --out-file ./js/script-compiled.js"
+    "start": "babel redux-demo/src/actions.js --watch --out-file ./js/script-compiled.js"
   },
   "repository": {
     "type": "git",
