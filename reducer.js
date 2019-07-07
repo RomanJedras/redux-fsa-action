@@ -1,4 +1,4 @@
-import {ADD_COMMENT,REMOVE_COMMENT} from './actions'
+import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COMMENT} from './actions'
 
 const initialState = {
 	comments: [],
@@ -17,6 +17,26 @@ function reducer(state = initialState, action) {
 					}
 					, ...state]
 			});
+		case EDIT_COMMENT :
+		return	 Object.assign({}, state, {
+			comments: state.comments.filter(comment => comment.id === action.id? ( [
+				{...comment, text: action.text}]):'')
+		});
+		
+		case THUMB_DOWN_COMMENT:
+			return   Object.assign({}, state, {
+				comments: state.comments.filter(comment => comment.id === action.id? ( [
+					{...comment, votes: comment.votes - 1
+					}]):'')
+			});
+		
+		case THUMB_UP_COMMENT:
+			return   Object.assign({}, state, {
+				comments: state.comments.filter(comment => comment.id === action.id? ( [
+					{...comment, votes: comment.votes + 1
+					}]):'')
+			});
+		
 		case REMOVE_COMMENT:
 			return Object.assign({}, state, {
 				comments: state.comments.filter(comment => comment.id !== action.id)
