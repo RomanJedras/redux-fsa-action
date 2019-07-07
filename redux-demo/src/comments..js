@@ -1,9 +1,6 @@
 import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COMMENT} from './actions'
 
-const initialState = {
-	comments: [],
-	users: []
-};
+
 
 function comments(state = [], action) {
 	switch(action.type) {
@@ -41,3 +38,4 @@ function comments(state = [], action) {
 	}
 }
 
+export default comments;
