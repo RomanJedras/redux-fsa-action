@@ -34,7 +34,7 @@ export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 	return {
 		type: THUMB_UP_COMMENT,
 		id,
-		votes: vote++
+		votes: votes++
 	}
 }
 
@@ -44,7 +44,7 @@ function thumbDownComment(votes, id) {
 return {
 	type: THUMB_DOWN_COMMENT,
 	id,
-	votes: vote--
+	votes: votes--
 }
 }
 

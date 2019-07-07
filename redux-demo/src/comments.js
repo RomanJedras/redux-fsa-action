@@ -21,7 +21,7 @@ function comments(state = [], action) {
 			return state.map(comment => {
 				if (comment.id === action.id) {
 					return {...comment,
-						votes: comment.vote - 1}
+						votes: comment.votes - 1}
 				}
 			});
 		
@@ -29,7 +29,7 @@ function comments(state = [], action) {
 			return state.map(comment => {
 				if (comment.id === action.id) {
 					return {...comment,
-						votes: comment.vote + 1}
+						votes: comment.votes + 1}
 				}
 			});
 		
