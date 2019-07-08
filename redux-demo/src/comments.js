@@ -8,7 +8,7 @@ function comments(state = [], action) {
 			return [{
 				id: action.id,
 				text: action.text,
-				timestamp: Date.now(),
+				timestamp: Date.now().toString(),
 				votes: 0
 			}
 				, ...state];
@@ -17,6 +17,7 @@ function comments(state = [], action) {
 		case EDIT_COMMENT:
 			return state.map(comment => {
 				if (comment.id === action.id) return {...comment, text: action.text}
+				return comment;
 			});
 		case THUMB_DOWN_COMMENT:
 			return state.map(comment => {
@@ -24,6 +25,7 @@ function comments(state = [], action) {
 					return {...comment,
 						votes: comment.votes - 1}
 				}
+				return comment;
 			});
 		
 		case THUMB_UP_COMMENT:
@@ -32,6 +34,7 @@ function comments(state = [], action) {
 					return {...comment,
 						votes: comment.votes + 1}
 				}
+				return comment;
 			});
 		
 		default:

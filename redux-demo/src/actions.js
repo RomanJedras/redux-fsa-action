@@ -31,23 +31,21 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 
 
 
- function thumbUpComment(votes, id){
-	return {
-		type: THUMB_UP_COMMENT,
-		id,
-		votes: votes++
+    function thumbUpComment(commentId){
+ 	    return {
+			type: THUMB_UP_COMMENT,
+			id: commentId,
+        }
 	}
-}
 
 
 
-function thumbDownComment(votes, id) {
-return {
-	type: THUMB_DOWN_COMMENT,
-	id,
-	votes: votes--
-}
-}
+	function thumbDownComment(commentId) {
+	return {
+		type: THUMB_DOWN_COMMENT,
+		id: commentId
+	}
+  }
 
 
 export {addComment,editComment, thumbUpComment, thumbDownComment, removeComment}
