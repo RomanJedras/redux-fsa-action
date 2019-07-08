@@ -8,6 +8,7 @@ function comments(state = [], action) {
 			return [{
 				id: action.id,
 				text: action.text,
+				timestamp: Date.now(),
 				votes: 0
 			}
 				, ...state];
