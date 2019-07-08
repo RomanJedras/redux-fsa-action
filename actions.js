@@ -1,9 +1,9 @@
 import uuid from 'uuid';
+import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COMMENT} from './actions_name'
 
 
-export const ADD_COMMENT = 'ADD_COMMENT';
 
- addComment = (text) => {
+ export const addComment = text => {
 	return {
 		type: ADD_COMMENT,
 		text,
@@ -11,8 +11,8 @@ export const ADD_COMMENT = 'ADD_COMMENT';
 	};
 }
 
-export const EDIT_COMMENT = 'EDIT_COMMENT';
- editComment = (text,id) => {
+
+ export const editComment = (text,id) => {
 	return {
 		type: EDIT_COMMENT,
 		id,
@@ -20,31 +20,31 @@ export const EDIT_COMMENT = 'EDIT_COMMENT';
 	};
 }
 
-export const REMOVE_COMMENT = 'REMOVE_COMMENT';
- removeComment = (id) => {
+
+ export const removeComment = id => {
 	return {
 		type: REMOVE_COMMENT,
 		id
 	}
 }
 
-export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 
- thumbUpComment = (votes, id) => {
+
+ export const thumbUpComment = (votes, id) => {
 	return {
 		type: THUMB_UP_COMMENT,
 		id,
-		votes: vote++
+		votes: this.votes++
 	}
 }
 
-export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-	 thumbDownComment = (votes, id) => {
+
+	export const thumbDownComment = (votes, id) => {
 	return {
 		type: THUMB_DOWN_COMMENT,
 		id,
-		votes: vote--
+		votes: this.votes--
 	}
 }
 

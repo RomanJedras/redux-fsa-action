@@ -1,4 +1,4 @@
-import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COMMENT} from './actions'
+import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COMMENT} from './actions_name'
 
 const initialState = {
 	comments: [],
@@ -24,7 +24,7 @@ function comments(state = [], action) {
 			return state.map(comment => {
 				if (comment.id === action.id) {
 					return {...comment,
-						votes: comment.vote - 1}
+						votes: comment.votes - 1}
 				}
 			});
 		
@@ -32,7 +32,7 @@ function comments(state = [], action) {
 			return state.map(comment => {
 				if (comment.id === action.id) {
 					return {...comment,
-						votes: comment.vote + 1}
+						votes: comment.votes + 1}
 				}
 			});
 		
@@ -41,3 +41,4 @@ function comments(state = [], action) {
 	}
 }
 
+export default comments;
