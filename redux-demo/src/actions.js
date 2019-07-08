@@ -1,7 +1,7 @@
 import uuid from 'uuid';
+import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COMMENT} from './actions_name';
 
 
-export const ADD_COMMENT = 'ADD_COMMENT';
 
  function addComment(text){
  	return {
@@ -12,7 +12,7 @@ export const ADD_COMMENT = 'ADD_COMMENT';
 	};
 }
 
-export const EDIT_COMMENT = 'EDIT_COMMENT';
+
  function editComment(text,id) {
 	return {
 		type: EDIT_COMMENT,
@@ -21,7 +21,7 @@ export const EDIT_COMMENT = 'EDIT_COMMENT';
 	};
 }
 
-export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+
  function  removeComment(id) {
 	return {
 		type: REMOVE_COMMENT,
@@ -29,7 +29,7 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 	}
 }
 
-export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
+
 
  function thumbUpComment(votes, id){
 	return {
@@ -39,7 +39,7 @@ export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 	}
 }
 
-export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
+
 
 function thumbDownComment(votes, id) {
 return {
