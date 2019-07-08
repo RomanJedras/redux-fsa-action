@@ -3,7 +3,7 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 
 
 
- function addComment(text){
+ const addComment = text =>{
  	return {
 		type: ADD_COMMENT,
 		text,
@@ -13,7 +13,7 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 }
 
 
- function editComment(text,id) {
+ const editComment = (text,id) => {
 	return {
 		type: EDIT_COMMENT,
 		id,
@@ -22,7 +22,7 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 }
 
 
- function  removeComment(id) {
+  const removeComment = id => {
 	return {
 		type: REMOVE_COMMENT,
 		id
@@ -31,7 +31,7 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 
 
 
-    function thumbUpComment(commentId){
+    const  thumbUpComment = commentId =>{
  	    return {
 			type: THUMB_UP_COMMENT,
 			id: commentId,
@@ -40,7 +40,7 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 
 
 
-	function thumbDownComment(commentId) {
+	const thumbDownComment = commentId => {
 	return {
 		type: THUMB_DOWN_COMMENT,
 		id: commentId
