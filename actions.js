@@ -34,7 +34,7 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 	return {
 		type: THUMB_UP_COMMENT,
 		id,
-		votes: votes++
+		votes: ++votes
 	}
 }
 
@@ -44,7 +44,7 @@ import {ADD_COMMENT,REMOVE_COMMENT,EDIT_COMMENT,THUMB_DOWN_COMMENT, THUMB_UP_COM
 	return {
 		type: THUMB_DOWN_COMMENT,
 		id,
-		votes: votes--
+		votes: --votes
 	}
 }
 
