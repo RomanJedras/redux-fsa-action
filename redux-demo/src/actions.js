@@ -7,7 +7,7 @@ export const ADD_COMMENT = 'ADD_COMMENT';
  	return {
 		type: ADD_COMMENT,
 		text,
-	    timestamp: Date.now(),
+	    timestamp: '',
 		id: uuid.v4()
 	};
 }
